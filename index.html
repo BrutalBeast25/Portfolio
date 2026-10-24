@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manivannan S | Data Engineer & Analyst</title>
+  <meta name="description"
+    content="Portfolio of Manivannan S — Data Engineer and Analyst with 3 years of experience in renewable energy SCADA, IoT telemetry, Python ETL pipelines, AWS, SQL, and AI-driven tools." />
+  <meta name="keywords"
+    content="Data Engineer, Data Analyst, Python, SQL, AWS, ThingsBoard, SCADA, Power BI, Wind Turbine, Solar, ETL, Chennai" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════ -->
+  <nav class="navbar">
+    <a href="#hero" class="nav-logo">MS</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════ -->
+  <section id="hero" class="hero">
+
+    <!-- ══ Wind Turbine + Solar Scene ══
+       3 blade turbine inspired by reference: each blade is a long
+       ellipse rotated at 0°, 120°, 240° around the hub centre.
+       The whole group spins around that same hub point.
+  ══ -->
+    <div class="hero-scene" aria-hidden="true">
+      <svg viewBox="0 0 400 250">
+        <circle class="sun-fill" cx="330" cy="48" r="20" opacity=".9" />
+        <g stroke="#f59e0b" stroke-width="3" stroke-linecap="round" opacity=".7">
+          <path d="M330 14v8M330 74v8M296 48h8M356 48h8M306 24l6 6M348 66l6 6M354 24l-6 6M312 66l-6 6" />
+        </g>
+        <path d="M0 215 Q100 190 200 208 T400 200 V250 H0Z" fill="#0070cc" opacity=".15" />
+        <path d="M196 124 L204 124 L208 215 L192 215Z" fill="#0f172a" opacity=".85" />
+        <g class="blades">
+          <g fill="#ffffff" stroke="#0f172a" stroke-width="2" stroke-linejoin="round">
+            <path d="M200 120 L195 50 Q200 30 205 50Z" />
+            <path d="M200 120 L195 50 Q200 30 205 50Z" transform="rotate(120 200 120)" />
+            <path d="M200 120 L195 50 Q200 30 205 50Z" transform="rotate(240 200 120)" />
+          </g>
+        </g>
+        <circle cx="200" cy="120" r="9" fill="#f59e0b" stroke="#0f172a" stroke-width="2" />
+      </svg>
+      <svg viewBox="0 0 400 70" preserveAspectRatio="none" style="height:70px">
+        <path id="traceFill" d="" />
+        <path id="trace" d="" />
+      </svg>
+      <div class="readout">
+        <div><strong id="kw">1,842 kW</strong>Generation</div>
+        <div><strong id="ws">9.4 m/s</strong>Wind speed</div>
+        <div><strong>20 ms</strong>Fault resolution</div>
+      </div>
+    </div>
+
+    <!-- ── Hero Content ── -->
+    <div class="hero-content">
+      <div class="hero-badge">Available for opportunities</div>
+
+      <h1>Hi, I'm <span class="name-highlight">Manivannan S</span></h1>
+
+      <div class="hero-designation-wrap">
+        <span>// &nbsp;</span>
+        <span id="typed-designation" class="typed-designation"></span>
+        <span class="typed-cursor"></span>
+      </div>
+
+      <p class="hero-bio">
+        Data Engineer &amp; Analyst with 3+ years in renewable energy. My Work involves building Python pipelines that turn
+        SCADA, PLC &amp; IoT data into dashboards, alerts and long-term archives. Now building AI-driven
+        tools that let operators query turbine data in plain language.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">&#9654; View My Work</a>
+        <a href="Manivannan_Data_Engineer_Resume.pdf" download class="btn-secondary">&#8595; Download Resume</a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/manivannan-s-beast/" target="_blank" rel="noopener" title="LinkedIn">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+        </a>
+        <a href="https://github.com/BrutalBeast25" target="_blank" rel="noopener" title="GitHub">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+          </svg>
+        </a>
+        <a href="mailto:mani02051999@gmail.com" title="Email">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+          </svg>
+        </a>
+        <a href="tel:+919962528836" title="Phone">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M6.62 10.79c1.44 2.83 3.76 5.15 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+     ABOUT
+════════════════════════════════════════════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">01. About Me</div>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="section-divider"></div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a <strong>Data Engineer &amp; Analyst</strong> based in Chennai, Tamil Nadu, with 3 years of hands-on
+            experience in the renewable energy industry. I work at the intersection of operational technology and data —
+            pulling raw telemetry from wind turbines, solar arrays, SCADA systems and IoT devices and turning it into
+            actionable insights.</p>
+          <p>My pipelines run on Python, push data to AWS S3, power real-time dashboards in Power BI and ThingsBoard,
+            and fire instant Telegram alerts when turbines fault. I also led a full production platform migration with
+            just two hours of downtime.</p>
+          <p>Currently extending this into AI — building a natural-language assistant that lets operators ask
+            plain-English questions and get turbine data back instantly, without writing a single line of SQL.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">3+</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Data Availability</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">35%</div>
+            <div class="stat-label">Downtime Reduction</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">20h+</div>
+            <div class="stat-label">Manual Work Saved/Week</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+     SKILLS
+════════════════════════════════════════════════ -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">02. Technical Stack</div>
+      <h2 class="section-title">Core Skills</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Tools and technologies I work with every day.</p>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">⚙️</div>
+          <h3>Programming</h3>
+          <div class="skill-tags">
+            <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span>
+            <span class="tag">Advanced SQL</span><span class="tag">Window Functions</span><span class="tag">PLC</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <h3>Data Analytics</h3>
+          <div class="skill-tags">
+            <span class="tag">Power BI</span><span class="tag">Tableau</span><span class="tag">EDA</span>
+            <span class="tag">KPI Reporting</span><span class="tag">SCADA</span><span class="tag">Time
+              Series</span><span class="tag">IoT Data</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🔧</div>
+          <h3>Data Engineering</h3>
+          <div class="skill-tags">
+            <span class="tag">ETL Pipelines</span><span class="tag">Data Migration</span><span
+              class="tag">Archival</span>
+            <span class="tag">Data Quality</span><span class="tag">Historical Data</span><span
+              class="tag">Buffering</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">☁️</div>
+          <h3>Cloud &amp; Infrastructure</h3>
+          <div class="skill-tags">
+            <span class="tag">AWS EC2</span><span class="tag">Amazon S3</span><span class="tag">Linux</span>
+            <span class="tag">Docker</span><span class="tag">ThingsBoard PE</span><span class="tag">Raspberry Pi</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🤖</div>
+          <h3>AI &amp; Machine Learning</h3>
+          <div class="skill-tags">
+            <span class="tag">RAG</span><span class="tag">LLM</span><span class="tag">Scikit-learn</span>
+            <span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">YOLO</span><span
+              class="tag">CNN</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📱</div>
+          <h3>Application Development</h3>
+          <div class="skill-tags">
+            <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">REST APIs</span>
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+     EXPERIENCE
+════════════════════════════════════════════════ -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label">03. Work Experience</div>
+      <h2 class="section-title">Where I've Worked</h2>
+      <div class="section-divider"></div>
+      <div class="exp-card">
+        <div class="exp-header">
+          <div class="exp-title">
+            <h3>Data Analyst &amp; Data Engineer</h3>
+            <div class="company">Pioneer Wincon Energy Systems Pvt. Ltd.</div>
+          </div>
+          <div class="exp-meta">
+            <div class="exp-period">Dec 2023 – Present</div>
+            <div class="exp-location">Chennai, Tamil Nadu</div>
+          </div>
+        </div>
+        <div class="exp-sections">
+          <div>
+            <div class="exp-section-title">📊 Data Analytics</div>
+            <div class="exp-bullets">
+              <div class="exp-bullet">Created Power BI and Tableau dashboards for engineering and service teams to track
+                turbine generation, performance indicators and operating parameters.</div>
+              <div class="exp-bullet">Automated weekly reports on power generation, turbine breakdowns and irradiance —
+                saving <strong>20+ hours</strong> of manual work every week.</div>
+              <div class="exp-bullet">Wrote Python tools extracting PLC faults and pinpointing turbine failures at 20 ms
+                resolution, cutting diagnostic time by <strong>50%</strong>.</div>
+              <div class="exp-bullet">Built a Telegram fault-alert system via ThingsBoard APIs — turbine downtime fell
+                by <strong>35%</strong> after rollout.</div>
+              <div class="exp-bullet">Built power-curve analysis and generation report tools so the O&amp;M team can
+                pull operational data independently.</div>
+            </div>
+          </div>
+          <div>
+            <div class="exp-section-title">🔧 Data Engineering</div>
+            <div class="exp-bullets">
+              <div class="exp-bullet">Built Python ETL workflows collecting, cleaning and organizing wind turbine and
+                solar telemetry for operational reporting.</div>
+              <div class="exp-bullet">Developed a buffering pipeline on Raspberry Pi that stores telemetry locally and
+                auto-syncs when internet is restored — achieving <strong>100% data availability</strong>.</div>
+              <div class="exp-bullet">Built an archival pipeline moving historical telemetry to Amazon S3 with FIFO
+                retention, keeping 2+ years of data accessible.</div>
+              <div class="exp-bullet">Migrated ThingsBoard from v2.4.1 to v4.3.1.2 (databases, dashboards, users, rule
+                chains) with only <strong>~2 hours of downtime</strong>.</div>
+              <div class="exp-bullet">Set up RF networks linking remote turbines and built an authenticated offline web
+                app for solar curtailment over RF.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+     PROJECTS
+════════════════════════════════════════════════ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">04. Projects</div>
+      <h2 class="section-title">What I've Built</h2>
+      <div class="section-divider"></div>
+      <p class="section-subtitle">Active projects I'm building, plus personal explorations.</p>
+
+      <div
+        style="font-size:0.75rem;font-weight:700;color:var(--clr-accent);text-transform:uppercase;letter-spacing:2px;font-family:var(--font-mono);margin-bottom:1rem;"
+       >▸ Active</div>
+      <div class="projects-grid" style="margin-bottom:2rem;">
+        <div class="project-card featured">
+          <div class="project-icon">🤖</div>
+          <h3>AI Turbine Operations Assistant &amp; SQL Chatbot</h3>
+          <p>A chatbot that turns plain-English questions into database queries and returns results in a readable
+            format. Extending into a full turbine assistant covering active alarms, generation reports, performance
+            data, and RAG-based troubleshooting guidance.</p>
+          <div class="project-tech">
+            <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">RAG</span><span
+              class="tag">LLMs</span><span class="tag">REST APIs</span>
+          </div>
+        </div>
+        <div class="project-card featured">
+          <div class="project-icon">📱</div>
+          <h3>ThingsBoard Mobile Application</h3>
+          <p>A Flutter mobile app giving site users and customers direct access to ThingsBoard dashboards via REST APIs.
+            Covers live turbine status, active alarms and historical telemetry — check your site from anywhere.</p>
+          <div class="project-tech">
+            <span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">REST APIs</span><span
+              class="tag">ThingsBoard PE</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        style="font-size:0.75rem;font-weight:700;color:var(--clr-muted);text-transform:uppercase;letter-spacing:2px;font-family:var(--font-mono);margin-bottom:1rem;"
+       >▸ Personal</div>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-icon">🚘</div>
+          <h3>Fake Number Plate Detection</h3>
+          <p>Web-based system using YOLO and CNN to extract vehicle details from video — number plate, make &amp; model,
+            color, travel trajectory — and flag fake plates with an alert to the nearest police unit.</p>
+          <div class="project-tech">
+            <span class="tag">Python</span><span class="tag">YOLO</span><span class="tag">CNN</span><span
+              class="tag">Deep Learning</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">🏏</div>
+          <h3>IPL Player Auction Prediction</h3>
+          <p>Scraped and cleaned 14 years of IPL data, then built three ML models: XGBoost for auction price, Random
+            Forest for the buying team, and Decision Tree for sold-or-unsold prediction.</p>
+          <div class="project-tech">
+            <span class="tag">Python</span><span class="tag">Web Scraping</span><span class="tag">XGBoost</span><span
+              class="tag">Random Forest</span><span class="tag">Decision Tree</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+     EDUCATION
+════════════════════════════════════════════════ -->
+  <section id="education">
+    <div class="container">
+      <div class="section-label">05. Education</div>
+      <h2 class="section-title">Academic Credentials</h2>
+      <div class="section-divider"></div>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div style="font-size:1.8rem;margin-bottom:0.85rem;">🎓</div>
+          <div class="edu-degree">M.Sc. in Data Science with Business Analysis</div>
+          <div class="edu-school">Rathinam College of Arts and Science</div>
+          <div class="edu-meta">Coimbatore, TN &nbsp;|&nbsp; July 2022 – May 2024</div>
+          <span class="edu-cgpa">CGPA: 8.19 / 10</span>
+          <p style="margin-top:0.85rem;font-size:0.8rem;color:var(--clr-muted);line-height:1.6;">Data Analysis ·
+            Visualization · ML · Deep Learning · Big Data Analytics</p>
+        </div>
+        <div class="edu-card">
+          <div style="font-size:1.8rem;margin-bottom:0.85rem;">🏫</div>
+          <div class="edu-degree">Bachelor of Computer Applications (BCA)</div>
+          <div class="edu-school">St. Thomas College of Arts and Science</div>
+          <div class="edu-meta">Chennai, TN &nbsp;|&nbsp; July 2018 – September 2021</div>
+          <span class="edu-cgpa">CGPA: 7.7 / 10</span>
+          <p style="margin-top:0.85rem;font-size:0.8rem;color:var(--clr-muted);line-height:1.6;">DBMS · Data Structures
+            &amp; Algorithms · Operating Systems · Software Engineering</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+     CERTIFICATIONS
+════════════════════════════════════════════════ -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-label">06. Certifications</div>
+      <h2 class="section-title">Credentials</h2>
+      <div class="section-divider"></div>
+      <div class="cert-grid">
+        <!-- <div class="cert-card">
+          <div class="cert-icon">🔵</div>
+          <div>
+            <div class="cert-name">Google Advanced Data Analytics</div>
+            <div class="cert-issuer">Google</div>
+          </div>
+        </div> -->
+        <div class="cert-card">
+          <div class="cert-icon">📊</div>
+          <div>
+            <a href="https://www.coursera.org/account/accomplishments/professional-cert/YRA7MND9E99T"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cert-name"
+              title="Google Advanced Data Analytics">
+              Google Advanced Data Analytics
+            </a>
+            <div class="cert-issuer">Google</div>
+          </div>
+        </div>
+        <!-- <div class="cert-card">
+          <div class="cert-icon">🟣</div>
+          <div>
+            <div class="cert-name">Microsoft AI &amp; ML Engineer</div>
+            <div class="cert-issuer">Microsoft</div>
+          </div>
+        </div> -->
+        <div class="cert-card">
+          <div class="cert-icon">🤖</div>
+          <div>
+            <a href="https://www.coursera.org/account/accomplishments/professional-cert/C70ABG03OKG8"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cert-name"
+              title="Microsoft AI & ML Engineer">
+              Microsoft AI & ML Engineer
+            </a>
+            <div class="cert-issuer">Microsoft</div>
+          </div>
+        </div>
+        <!-- <div class="cert-card">
+          <div class="cert-icon">🔷</div>
+          <div>
+            <div class="cert-name">IBM Data Engineer</div>
+            <div class="cert-issuer">IBM</div>
+          </div>
+        </div> -->
+        <div class="cert-card">
+          <div class="cert-icon">🗄️</div>
+          <div>
+            <a href="https://www.coursera.org/account/accomplishments/professional-cert/X7L7O1NAQ23D"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cert-name"
+              title="IBM Data Engineer">
+              IBM Data Engineer
+            </a>
+            <div class="cert-issuer">IBM</div>
+          </div>
+        </div>
+        <!-- <div class="cert-card">
+          <div class="cert-icon">🟠</div>
+          <div>
+            <div class="cert-name">Cloud Data Management</div>
+            <div class="cert-issuer">Oracle</div>
+          </div>
+        </div> -->
+        <div class="cert-card">
+          <div class="cert-icon">☁️</div>
+          <div>
+            <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=2F95553F75B44E1B87D1D19DDF6DDD31994D8C83F510FD539FDF0BB5F9647A9D"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cert-name"
+              title="Cloud Data Management">
+              Cloud Data Management
+            </a>
+            <div class="cert-issuer">Oracle</div>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">📈</div>
+          <div>
+            <div class="cert-name">Power BI</div>
+            <div class="cert-issuer">Simplilearn</div>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">🗃️</div>
+          <div>
+            <div class="cert-name">Advanced SQL</div>
+            <div class="cert-issuer">HackerRank</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+     PUBLICATIONS & ACTIVITIES
+════════════════════════════════════════════════ -->
+  <section id="publications">
+    <div class="container">
+      <div class="section-label">07. Publications &amp; Activities</div>
+      <h2 class="section-title">Research &amp; Engagement</h2>
+      <div class="section-divider"></div>
+      <div class="pub-list">
+        <div class="pub-item">
+          <div class="pub-item-icon">📄</div>
+          <div class="pub-item-text">
+            <!-- <strong>Conference Paper – International Conference</strong> -->
+            <strong>
+              <a href="https://www.ijniet.org/wp-content/uploads/2024/05/286.pdf"
+                target="_blank"
+                rel="noopener noreferrer">
+                Conference Paper – Recognizing and Intercepting Users of Fake Number Plates
+              </a>
+            </strong>
+            "Recognizing and Intercepting Users of Fake Number Plates" — Published at an international conference,
+            presenting a deep learning-based approach to vehicle identity verification using YOLO and CNN architectures.
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-item-icon">🏆</div>
+          <div class="pub-item-text">
+            <strong>Smart India Hackathon 2022 – Government of India</strong>
+            Participated in the national innovation competition. Our team proposed an ML, DL and NLP-based platform for
+            farmers covering soil-based cultivation guidance, weather reports, a natural-language knowledge library, and
+            an agricultural marketplace.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">08. Contact</div>
+      <h2 class="section-title">Let's Connect</h2>
+      <div class="section-divider"></div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Open to opportunities</h3>
+          <p>I'm always open to discussing new roles, interesting projects, or anything in the data and AI space.
+            Whether you want to collaborate or just say hello — my inbox is open.</p>
+          <div class="contact-links">
+            <a href="mailto:mani02051999@gmail.com" class="contact-link">
+              <span class="contact-link-icon">✉️</span> mani02051999@gmail.com
+            </a>
+            <a href="tel:+919962528836" class="contact-link">
+              <span class="contact-link-icon">📞</span> +91 99625 28836
+            </a>
+            <a href="https://www.linkedin.com/in/manivannan-s-beast/" target="_blank" rel="noopener"
+              class="contact-link">
+              <span class="contact-link-icon">🔗</span> linkedin.com/in/manivannan-s-beast
+            </a>
+            <a href="https://github.com/BrutalBeast25" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link-icon">💻</span> github.com/BrutalBeast25
+            </a>
+            <div class="contact-link" style="cursor:default;">
+              <span class="contact-link-icon">📍</span> Chennai, Tamil Nadu, India
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="cf-email">Email</label>
+            <input type="email" id="cf-email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" placeholder="What's this about?" />
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="4" placeholder="Tell me more..." required></textarea>
+          </div>
+          <p style="font-size:0.75rem;color:var(--clr-muted);margin-bottom:0.85rem;">
+            ℹ️ Clicking Send Message will open your email client pre-filled with this message.
+          </p>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
+            Send Message →
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Manivannan S</div>
+      <div class="footer-copy">&copy;  Manivannan S &nbsp;·&nbsp; Data Engineer &amp; Analyst</div>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/manivannan-s-beast/" target="_blank" title="LinkedIn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+        </a>
+        <a href="https://github.com/BrutalBeast25" target="_blank" title="GitHub">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+          </svg>
+        </a>
+        <a href="mailto:mani02051999@gmail.com" title="Email">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
